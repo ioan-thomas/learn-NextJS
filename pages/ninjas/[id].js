@@ -21,7 +21,8 @@ export const getStaticProps = async ({params:{id}}) => {
     const data = await res.json();
 
     return {
-        props: {ninja: data}
+        props: {ninja: data}, 
+        revalidate: 1
     }
 }
 
